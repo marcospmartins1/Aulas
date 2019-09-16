@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:AppCalculadora"
+             x:Class="AppCalculadora.MainPage">
+
+    <StackLayout>
+        <Entry x:Name="entryNumero"/>
+        <!---->
+        <StackLayout Orientation="Horizontal">
+            <Button x:Name="btn7"
+                 Text="7"
+                 FontSize="Large"
+                 Clicked="Btn7_Clicked"></Button>
+            <Button x:Name="btn8"
+                 Text="8"
+                 FontSize="Large"
+                 Clicked="Btn8_Clicked"></Button>
+            <Button x:Name="btn9"
+                 Text="9"
+                 FontSize="Large"
+                 Clicked="Btn9_Clicked"></Button>
+            <Button x:Name="btnSomar"
+                 Text="+"
+                 TextColor="Red"
+                 FontSize="Large"
+                 Clicked="BtnSomar_Clicked"></Button>
+        </StackLayout>
+        <!---->
+        <StackLayout Orientation="Horizontal">
+            <Button x:Name="btn6"
+                 Text="6"
+                 FontSize="Large"
+                 Clicked="Btn6_Clicked"></Button>
+            <Button x:Name="btn5"
+                 Text="5"
+                 FontSize="Large"
+                 Clicked="Btn5_Clicked"></Button>
+            <Button x:Name="btn4"
+                 Text="4"
+                 FontSize="Large"
+                 Clicked="Btn4_Clicked"></Button>
+            <Button x:Name="btnMultiplicar"
+                 Text="*"
+                 TextColor="Red"
+                 FontSize="Large"
+                 Clicked="BtnMultiplicar_Clicked"></Button>
+        </StackLayout>
+        <!---->
+        <StackLayout Orientation="Horizontal">
+            <Button x:Name="btn3"
+                 Text="3"
+                 FontSize="Large"
+                 Clicked="Btn3_Clicked"></Button>
+            <Button x:Name="btn2"
+                 Text="2"
+                 FontSize="Large"
+                 Clicked="Btn2_Clicked"></Button>
+            <Button x:Name="btn1"
+                 Text="1"
+                 FontSize="Large"
+                 Clicked="Btn1_Clicked"></Button>
+            <Button x:Name="btnSubtrair"
+                 Text="-"
+                 TextColor="Red"
+                 FontSize="Large"
+                 Clicked="BtnSubtrair_Clicked"></Button>
+        </StackLayout>
+        <!---->
+        <StackLayout Orientation="Horizontal">
+            <Button x:Name="btn0"
+                     Text="0"
+                     FontSize="Large"
+                     Clicked="Btn0_Clicked"></Button>
+            <Button x:Name="btnLimpar"
+                     Text="CE"
+                     FontSize="Large"
+                     Clicked="BtnLimpar_Clicked"></Button>
+            <Button x:Name="btnIgual"
+                     Text="="
+                     FontSize="Large"
+                     Clicked="BtnIgual_Clicked"></Button>
+            <Button x:Name="btnDividir"
+                     Text="/"
+                     TextColor="Red"
+                     FontSize="Large"
+                     Clicked="BtnDividir_Clicked"></Button>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>
