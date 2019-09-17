@@ -6,50 +6,40 @@ namespace AppCalculadora
 {
     class Calculadora
     {
-        public string res;
-        public string label;
         public double valor1;
         public double valor2;
-        public string op;
+        public string operacao;
+        public string label
 
         public void Somar()
         {
-            op = "+";
-            res = "";
+            operacao = "SOMA";
         }
 
         public void Igual()
         {
             double resultado = 0;
 
-            if (op == "+")
+            if (operacao == "SOMA")
             {
                 resultado = valor1 + valor2;
                 label = resultado.ToString();
             }
-            else if (op == "-")
+            else if (operacao == "-")
             {
                 resultado = valor1 - valor2;
                 label = resultado.ToString();
             }
-            else if (op == "*")
+            else if (operacao == "*")
             {
                 resultado = valor1 * valor2;
                 label = resultado.ToString();
             }
-            else if (op == "/")
+            else if (operacao == "/")
             {
                 resultado = valor1 / valor2;
                 label = resultado.ToString();
             }
-        }
-
-        public void Limpar()
-        {
-            label = "";
-            valor1 = 0;
-            valor2 = 0;
-            op = "";
         }
     }
 }
