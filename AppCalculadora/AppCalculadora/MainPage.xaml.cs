@@ -67,11 +67,20 @@ namespace AppCalculadora
 
         private void BtnIgual_Clicked(object sender, EventArgs e)
         {
+            Calculadora calculadora = new Calculadora();
+            calculadora.valor2 = Convert.ToDouble(entryNumero.Text);
 
+            calculadora.Igual();
+
+            entryNumero.Text = calculadora.label;
         }
         private void BtnSomar_Clicked(object sender, EventArgs e)
         {
+            Calculadora calculadora = new Calculadora();
+            calculadora.valor1 += Convert.ToDouble(entryNumero.Text);
+            calculadora.Somar();
 
+            entryNumero.Text = calculadora.res;
         }
 
         private void BtnSubtrair_Clicked(object sender, EventArgs e)
@@ -91,7 +100,9 @@ namespace AppCalculadora
 
         private void BtnLimpar_Clicked_1(object sender, EventArgs e)
         {
+            Calculadora calculadora = new Calculadora();
 
+            calculadora.label = entryNumero.Text;
         }
     }
 }
