@@ -9,6 +9,10 @@ namespace AppCalculadora
 {
     public partial class MainPage : ContentPage
     {
+        private double valor1;
+        private double valor2;
+        private string operacao;
+
         public MainPage()
         {
             InitializeComponent();
@@ -65,42 +69,69 @@ namespace AppCalculadora
             entryNumero.Text += "0";
         }
 
-        private void BtnIgual_Clicked(object sender, EventArgs e)
-        {
-            Calculadora calculadora = new Calculadora();
-            calculadora.valor2 = Convert.ToDouble(entryNumero.Text);
-
-            calculadora.Igual();
-
-            entryNumero.Text = calculadora.label;
-        }
         private void BtnSomar_Clicked(object sender, EventArgs e)
         {
-            Calculadora calculadora = new Calculadora();
-            calculadora.valor1 = Convert.ToDouble(entryNumero.Text);
-            calculadora.Somar();
-
+            this.valor1 = Convert.ToDouble(entryNumero.Text);
             entryNumero.Text = "";
+            this.operacao = "SOMA";
         }
 
         private void BtnSubtrair_Clicked(object sender, EventArgs e)
         {
-
+            this.valor1 = Convert.ToDouble(entryNumero.Text);
+            entryNumero.Text = "";
+            this.operacao = "SUBTRAIR";
         }
 
         private void BtnMultiplicar_Clicked(object sender, EventArgs e)
         {
-
+            this.valor1 = Convert.ToDouble(entryNumero.Text);
+            entryNumero.Text = "";
+            this.operacao = "MULTIPLICAR";
         }
 
         private void BtnDividir_Clicked(object sender, EventArgs e)
         {
-
+            this.valor1 = Convert.ToDouble(entryNumero.Text);
+            entryNumero.Text = "";
+            this.operacao = "DIVIDIR";
         }
 
-        private void BtnLimpar_Clicked_1(object sender, EventArgs e)
+        private void BtnIgual_Clicked(object sender, EventArgs e)
         {
+            Calculadora calculadora = new Calculadora();
+            this.valor2 = Convert.ToDouble(entryNumero.Text);
 
+            switch (this.operacao)
+            {
+                case "SOMA":
+                    entryNumero.Text = calculadora.Somar(this.valor1, this.valor2).ToString();
+                    break;
+
+                case "SUBTRAIR":
+                    entryNumero.Text = calculadora.Subtrair(this.valor1, this.valor2).ToString();
+                    break;
+
+                case "MULTIPLICAR":
+                    entryNumero.Text = calculadora.Multiplicar(this.valor1, this.valor2).ToString();
+                    break;
+
+                case "DIVIDIR":
+                    entryNumero.Text = calculadora.Dividir(this.valor1, this.valor2).ToString();
+                    break;
+
+                default:
+                    DisplayAlert("Ops..", "HOUVE UM ERRO! \n TENTE NOVAMENTE", "OK");
+                    break;
+            }
+        }
+
+        private void BtnLimpar_Clicked(object sender, EventArgs e)
+        {
+            entryNumero.Text = "";
+            this.valor1 = 0;
+            this.valor2 = 0;
+            this.operacao = "";
         }
     }
 }

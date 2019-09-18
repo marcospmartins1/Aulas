@@ -4,42 +4,27 @@ using System.Text;
 
 namespace AppCalculadora
 {
-    class Calculadora
+    public class Calculadora
     {
-        public double valor1;
-        public double valor2;
-        public string operacao;
-        public string label
 
-        public void Somar()
+        public double Somar(double n1, double n2)
         {
-            operacao = "SOMA";
+             return n1 + n2;
         }
 
-        public void Igual()
+        public double Subtrair(double n1, double n2)
         {
-            double resultado = 0;
+            return n1 - n2;
+        }
 
-            if (operacao == "SOMA")
-            {
-                resultado = valor1 + valor2;
-                label = resultado.ToString();
-            }
-            else if (operacao == "-")
-            {
-                resultado = valor1 - valor2;
-                label = resultado.ToString();
-            }
-            else if (operacao == "*")
-            {
-                resultado = valor1 * valor2;
-                label = resultado.ToString();
-            }
-            else if (operacao == "/")
-            {
-                resultado = valor1 / valor2;
-                label = resultado.ToString();
-            }
+        public double Multiplicar(double n1, double n2)
+        {
+            return n1 * n2;
+        }
+
+        public double Dividir(double n1, double n2)
+        {
+            return n1 / n2;
         }
     }
 }

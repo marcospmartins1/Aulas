@@ -5,122 +5,70 @@
              x:Class="AppCalculadora.MainPage">
 
     <StackLayout
-        BackgroundColor="White">
+        BackgroundColor="White" Margin="25">
+        <Label Text="" Margin="125"></Label>
+        <!--Campo dos números-->
         <Entry x:Name="entryNumero"
-               FontSize="30"
-               TextColor="White"
-               BackgroundColor="Black"/>
-        <!---->
+                    FontSize="30" TextColor="White"
+                    BackgroundColor="Black"/>
+        <!--Primeira linha-->
         <StackLayout Orientation="Horizontal">
-            <Button x:Name="btn7"
-                 Text="7"
-                 FontSize="30"
-                 BackgroundColor="White"
-                 TextColor="Black"
-                 Clicked="Btn7_Clicked"></Button>
-            <Button x:Name="btn8"
-                 Text="8"
-                 FontSize="30"
-                 BackgroundColor="White"
-                 TextColor="Black"
-                 Clicked="Btn8_Clicked"></Button>
-            <Button x:Name="btn9"
-                 Text="9"
-                 FontSize="30"
-                 BackgroundColor="White"
-                 TextColor="Black"
-                 Clicked="Btn9_Clicked"></Button>
-            <Button x:Name="btnSomar"
-                 Text="+"
-                 TextColor="Black"
-                 BackgroundColor="Orange"
-                 FontAttributes="Bold"
-                 Clicked="BtnSomar_Clicked"></Button>
+            <Button x:Name="btn7" Text="7"
+                    FontSize="30" BackgroundColor="White" TextColor="Black"
+                    Clicked="Btn7_Clicked"></Button>
+            <Button x:Name="btn8" Text="8"
+                    FontSize="30" BackgroundColor="White" TextColor="Black"
+                    Clicked="Btn8_Clicked"></Button>
+            <Button x:Name="btn9" Text="9"
+                    FontSize="30" BackgroundColor="White" TextColor="Black"
+                    Clicked="Btn9_Clicked"></Button>
+            <Button x:Name="btnSomar" Text="+"
+                    TextColor="Black" BackgroundColor="Orange" FontAttributes="Bold"
+                    Clicked="BtnSomar_Clicked"></Button>
         </StackLayout>
-        <!---->
+        <!--Segunda linha-->
         <StackLayout Orientation="Horizontal">
-            <Button x:Name="btn6"
-                 Text="6"
-                 FontSize="30"
-                 BackgroundColor="White"
-                 TextColor="Black"
-                 Clicked="Btn6_Clicked"></Button>
-            <Button x:Name="btn5"
-                 Text="5"
-                 FontSize="30"
-                 BackgroundColor="White"
-                 TextColor="Black"
-                 Clicked="Btn5_Clicked"></Button>
-            <Button x:Name="btn4"
-                 Text="4"
-                 FontSize="30"
-                 BackgroundColor="White"
-                 TextColor="Black"
-                 Clicked="Btn4_Clicked"></Button>
-            <Button x:Name="btnMultiplicar"
-                 Text="*"
-                 TextColor="Black"
-                 BackgroundColor="Orange"
-                 FontSize="30"
-                 FontAttributes="Bold"
-                 Clicked="BtnMultiplicar_Clicked"></Button>
+            <Button x:Name="btn6" Text="6"
+                    FontSize="30" BackgroundColor="White" TextColor="Black"
+                    Clicked="Btn6_Clicked"></Button>
+            <Button x:Name="btn5" Text="5"
+                    FontSize="30" BackgroundColor="White" TextColor="Black"
+                    Clicked="Btn5_Clicked"></Button>
+            <Button x:Name="btn4" Text="4"
+                    FontSize="30" BackgroundColor="White" TextColor="Black"
+                    Clicked="Btn4_Clicked"></Button>
+            <Button x:Name="btnMultiplicar" Text="*"
+                    FontSize="30" FontAttributes="Bold" BackgroundColor="Orange" TextColor="Black"
+                    Clicked="BtnMultiplicar_Clicked"></Button>
         </StackLayout>
-        <!---->
+        <!--Terceira linha-->
         <StackLayout Orientation="Horizontal">
-            <Button x:Name="btn3"
-                 Text="3"
-                 FontSize="30"
-                 BackgroundColor="White"
-                 TextColor="Black"
-                 Clicked="Btn3_Clicked"></Button>
-            <Button x:Name="btn2"
-                 Text="2"
-                 FontSize="30"
-                 BackgroundColor="White"
-                 TextColor="Black"
-                 Clicked="Btn2_Clicked"></Button>
-            <Button x:Name="btn1"
-                 Text="1"
-                 FontSize="30"
-                 BackgroundColor="White"
-                 TextColor="Black"
-                 Clicked="Btn1_Clicked"></Button>
-            <Button x:Name="btnSubtrair"
-                 Text="-"
-                 TextColor="Black"
-                 BackgroundColor="Orange"
-                 FontSize="30"
-                 FontAttributes="Bold"
-                 Clicked="BtnSubtrair_Clicked"></Button>
+            <Button x:Name="btn3" Text="3"
+                    FontSize="30" BackgroundColor="White" TextColor="Black"
+                    Clicked="Btn3_Clicked"></Button>
+            <Button x:Name="btn2" Text="2" 
+                    FontSize="30" BackgroundColor="White" TextColor="Black"
+                    Clicked="Btn2_Clicked"></Button>
+            <Button x:Name="btn1" Text="1"
+                    FontSize="30" BackgroundColor="White" TextColor="Black"
+                    Clicked="Btn1_Clicked"></Button>
+            <Button x:Name="btnSubtrair" Text="-"
+                    FontSize="30" FontAttributes="Bold" BackgroundColor="Orange" TextColor="Black"
+                    Clicked="BtnSubtrair_Clicked"></Button>
         </StackLayout>
-        <!---->
+        <!--Quarta linha-->
         <StackLayout Orientation="Horizontal">
-            <Button x:Name="btn0"
-                     Text="0"
-                     FontSize="30"
-                     BackgroundColor="White"
-                     TextColor="Black"
+            <Button x:Name="btn0" Text="0"
+                     FontSize="30" BackgroundColor="White" TextColor="Black"
                      Clicked="Btn0_Clicked"></Button>
-            <Button x:Name="btnLimpar"
-                     Text="CE"
-                     FontSize="30"
-                     BackgroundColor="Orange"
-                     TextColor="Black"
-                     FontAttributes="Bold"
-                     Clicked="BtnLimpar_Clicked_1"></Button>
-            <Button x:Name="btnIgual"
-                     Text="="
-                     FontSize="30"
-                     BackgroundColor="Orange"
-                     TextColor="Black"
-                     FontAttributes="Bold"
+            <Button x:Name="btnLimpar" Text="CE"
+                     FontSize="30" FontAttributes="Bold" BackgroundColor="Orange" TextColor="Black" 
+                     Clicked="BtnLimpar_Clicked"></Button>
+            <Button x:Name="btnIgual" Text="="
+                     FontSize="30" FontAttributes="Bold" BackgroundColor="Orange"  TextColor="Black"
                      Clicked="BtnIgual_Clicked"></Button>
-            <Button x:Name="btnDividir"
-                     Text="/"
-                     TextColor="Black"
-                     BackgroundColor="Orange"
-                     FontSize="30"
-                     FontAttributes="Bold"
+            <Button x:Name="btnDividir" Text="/"
+                     FontSize="30" FontAttributes="Bold" BackgroundColor="Orange" TextColor="Black"
                      Clicked="BtnDividir_Clicked"></Button>
         </StackLayout>
     </StackLayout>
